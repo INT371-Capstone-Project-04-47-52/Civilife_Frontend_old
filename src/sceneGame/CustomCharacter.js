@@ -2,6 +2,7 @@ import background from "../assetGame/CustomCharacter/dressRoom.jpg";
 import character from "../assetGame/CustomCharacter/Character.png";
 import { Link } from "react-router-dom";
 import React from "react";
+import { ProgressBar } from 'react-bootstrap';
 class CustomCharacter extends React.Component {
   render() {
     return  <div
@@ -59,8 +60,8 @@ class CustomCharacter extends React.Component {
               <label for="email" class="block text-gray-800 font-bold">
                 พลังงาน
               </label>
-              <div className="w3-light-grey w3-round-xlarge">
-                <div className="w3-container bg-sky-500 w3-round-xlarge w-4/5 text-white my-2">
+              <div class="w3-light-grey w3-round-xlarge">
+                <div class="w3-container bg-sky-500 w3-round-xlarge w-4/5 text-white my-2">
                   80/100
                 </div>
               </div>
@@ -69,6 +70,7 @@ class CustomCharacter extends React.Component {
               <label for="email" class="block text-gray-800 font-bold">
                 ความสุข
               </label>
+              <ProgressBar className="rounded-xl" now={60} />
               <div className="w3-light-grey w3-round-xlarge">
                 <div className="w3-container bg-pink-400 w3-round-xlarge w-2/12 text-white my-2">
                   10/100

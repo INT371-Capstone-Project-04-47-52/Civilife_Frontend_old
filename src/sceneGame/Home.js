@@ -28,8 +28,8 @@ class Home extends React.Component {
       >
         <div className="absolute bg-sky-400 right-0  w-3/12 border border-gray-800 text-left p-2 m-2 rounded-xl">
           <div className="columns-2">
-            <div class=" ">
-              <label for="email" class="block text-gray-800 font-bold">
+            <div className=" ">
+              <label for="email" className="block text-gray-800 font-bold">
                 Username
               </label>
               <p className=" text-gray-600 border-gray-600 py-1 pl-3 rounded-lg border-1  outline-none focus:ring-indigo-600 :ring-indigo-600 bg-sky-100">
@@ -38,22 +38,16 @@ class Home extends React.Component {
               {/* <input type="text" name="name" id="name" placeholder="username" class="w-full border-gray-600 py-1 pl-3 rounded-lg border-1  outline-none focus:ring-indigo-600 :ring-indigo-600" />
                */}
             </div>
-            <div class="">
-              <label for="email" class="block text-gray-800 font-bold">
+            <div className="">
+              <label for="email" className="block text-gray-800 font-bold">
                 ตั้งค่า
               </label>
 
-              <i class="material-icons">settings</i>
+              <i className="material-icons">settings</i>
 
               {/*เปิดปิด popup */}
               <div>
-        {/* <Popup
-          trigger={<button>click to open</button>}
-          content={<button onClick={this.handleClose}>click to close</button>}
-          on='click'
-          open={this.state.isOpen}
-          onOpen={this.handleOpen}
-        /> */}
+      
       </div>
               {/* <div className="popup">
                 <div className="popup_inner">
@@ -68,16 +62,10 @@ class Home extends React.Component {
         </div>
         <div className="absolute right-0 m-8"></div>
 
-        <div className="bg-yellow-200 w-2/6 border border-gray-800 text-left p-5 m-2 rounded-xl">
-          <p>
-            <label>ชื่อ : นรานี</label> <label>นามสกุล : ศรีสุกุล </label>
-          </p>
-          <div className="">
-            <div>
-              <p>เงิน: </p>
-            </div>
-
-            <div class="w3-light-grey w3-round-xlarge ">
+        <div className="bg-green-200 w-2/6 border border-gray-800 text-left p-2 m-2 rounded-xl">
+        
+          {/* <div className="">
+          <p className="">เงิน: </p>    <div className="w3-light-grey w3-round-xlarge ">
               <div
                 className="w3-container  w3-center text-sm bg-green-500 text-white w3-round-xlarge"
                 style={{ width: "80%" }}
@@ -85,10 +73,22 @@ class Home extends React.Component {
                 15,000
               </div>
             </div>
+          </div> */}
+           <div>
+           <label>ชื่อ : นรานี</label> <label>นามสกุล : ศรีสุกุล </label> <br></br>
+            <label>เงิน : </label>
+            <div className=" w3-light-grey w3-round-xlarge">
+              <div
+                className="w3-container  w3-center  text-sm bg-green-500 text-white w3-round-xlarge"
+                style={{ width: "70%" }}
+              >
+                13,480 บาท
+              </div>
+            </div>
           </div>
           <div>
             <label>พลังงาน : </label>
-            <div class=" w3-light-grey w3-round-xlarge">
+            <div className=" w3-light-grey w3-round-xlarge">
               <div
                 className="w3-container  w3-center  text-sm bg-sky-500 text-white w3-round-xlarge"
                 style={{ width: "20%" }}
@@ -99,7 +99,7 @@ class Home extends React.Component {
           </div>
           <div>
             <label>ความสุข : </label>
-            <div class="w3-light-grey w3-round-xlarge">
+            <div className="w3-light-grey w3-round-xlarge">
               <div
                 className="w3-container  w3-center text-sm bg-orange-400 text-white w3-round-xlarge"
                 style={{ width: "55%" }}
@@ -119,7 +119,7 @@ class Home extends React.Component {
         </Link>
       
       </nav> */}
-        <div className="bg-yellow-200 w-3/12 border border-gray-800 text-left p-5 m-2 rounded-xl">
+        <div className="bg-yellow-200 w-3/12 border border-gray-800 text-left p-2 m-2 rounded-xl">
           <div className="">
             <p className="font-bold">ภารกิจประจำวัน</p>
             <p>1.เดินทางด้วยรถรถโดยสาร ✅</p>

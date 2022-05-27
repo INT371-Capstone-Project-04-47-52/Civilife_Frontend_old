@@ -2,9 +2,11 @@ import background from "../assetGame/LoginPage/Home.png";
 import nameCivilife from "../assetGame/LoginPage/nameCivilife.png";
 import startButton from "../assetGame/LoginPage/startButton.png";
 import { Link } from "react-router-dom";
-import React from "react";
 
-class LoginGame extends React.Component {
+import React, { Component } from "react";
+import { Redirect } from "react-router-dom";
+import withContext from "../withContext";
+class LoginGame extends Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -12,25 +14,25 @@ class LoginGame extends React.Component {
       password: "",
     };
   }
-  loginData = (e) => {
+  login = (e) => {
     e.preventDefault();
 
     const { username, password } = this.state;
     if (!username || !password) {
       return this.setState({ error: "Fill all fields!" });
     }
-
-    this.props.context.login(username, password).then((loggedIn) => {
-      if (!loggedIn) {
-        this.setState({ error: "Invalid Credentails" });
-      }
-    });
+    this.props.context.login(username, password)
+      .then((loggedIn) => {
+        if (!loggedIn) {
+          this.setState({ error: "Invalid Credentails" });
+        }
+      })     
   };
   handleChange = (e) =>
     this.setState({ [e.target.name]: e.target.value, error: "" });
 
   render() {
-    return (
+    return !this.props.context.user ? (
       <div
         className="App bg-cover bg-no-repeat bg-center fixed w-screen h-screen bg-fixed "
         style={{ backgroundImage: `url(${background})` }}
@@ -47,8 +49,8 @@ class LoginGame extends React.Component {
               onSubmit={this.loginData}
               className="mt-2 flex flex-col lg:w-1/2 w-8/12 "
             >
-              <div className="bg-sky-400 p-8 py-5 rounded-xl">
-                <p className="text-white text-3xl my-5">ลงชื่อเข้าใช้</p>
+              <div className="bg-sky-400 px-8 py-2 rounded-xl">
+                <p className="text-white text-3xl ">ลงชื่อเข้าใช้</p>
                 <div className="flex flex-wrap border-2 border-gray-200 rounded-xl items-stretch w-full mb-4 relative h-15 bg-white items-center mb-6 pr-10">
                   <div className="flex -mr-px justify-center w-15 p-4">
                     <span className="flex items-center leading-normal bg-white px-3 border-0 rounded rounded-r-none text-2xl text-gray-600">
@@ -93,19 +95,21 @@ class LoginGame extends React.Component {
         <nav>
           <Link to="/ChooseCharacter">
             <button>
-              {/* <img
-                classNameName=""
+              <img
+                className="w-1/2 mx-auto py-5"
                 alt=""
                 src={startButton}
-              /> */}
-              เริ่มเกม
+              />
+            
               </button>
             
             
           </Link>
         </nav>
       </div>
-    );
+     ) : (
+      <Redirect to="/Customer" />
+  ); 
   }
 }
 
