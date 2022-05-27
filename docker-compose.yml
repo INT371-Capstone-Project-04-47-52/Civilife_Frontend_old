@@ -7,7 +7,7 @@ services:
              ipv4_address: 172.20.0.3
        build: 
           context: .
-       image: frontend
+       image: ghcr.io/int371-capstone-project-04-47-52/civilifefront:main
        ports:
           - "3000:80"
           
