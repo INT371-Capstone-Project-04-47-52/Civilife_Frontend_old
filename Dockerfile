@@ -1,10 +1,11 @@
-FROM node:14.15.4-alpine3.12 as build-stage
+FROM node:latest as build-stage
 WORKDIR /app
 COPY package*.json ./
 RUN npm install
-COPY . ./
-RUN npm build
+COPY ./ .
+RUN npm run build
 
-FROM nginx:stable-alpine as production-stage
+FROM nginx as production-stage
+RUN mkdir /app
 COPY --from=build-stage /app/dist /app
 COPY nginx.conf /etc/nginx/nginx.conf
