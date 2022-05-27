@@ -33,7 +33,7 @@ jobs:
           password: ${{ secrets.PASSWORD }}
           # port: ${{ secrets.SERVERPORT }}
           script: |
-            cd ./client
+            cd ./Civilife_Frontend
             docker-compose down
             docker-compose pull
             docker-compose up -d
