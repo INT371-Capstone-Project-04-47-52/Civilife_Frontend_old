@@ -1,0 +1,19 @@
+version: "3"
+services:
+   frontend:
+       container_name: frontend_con
+       networks:
+          network:
+             ipv4_address: 172.20.0.3
+       build: 
+          context: .
+       image: frontend
+       ports:
+          - "3000:80"
+          
+networks:
+    default:
+       external:
+          name: network
+    network:
+       external: true
