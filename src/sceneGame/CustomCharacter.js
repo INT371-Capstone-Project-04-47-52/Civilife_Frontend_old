@@ -15,9 +15,9 @@ class CustomCharacter extends React.Component {
           <img className="object-contain h-144 mt-16" src={character} />
         </div>
         <div className="mb-8 mx-8 w-1/2">
-          <div class="py-6  px-8  bg-sky-200  rounded-xl shadow-xl text-left ">
-            <div class="mb-3">
-              <label for="name" class="block text-gray-800 font-bold">
+          <div className="py-6  px-8  bg-sky-200  rounded-xl shadow-xl text-left ">
+            <div className="mb-3">
+              <label for="name" className="block text-gray-800 font-bold">
                 ชื่อ:
               </label>
               <input
@@ -25,11 +25,11 @@ class CustomCharacter extends React.Component {
                 name="name"
                 id="name"
                 placeholder="ชื่อตัวละคร"
-                class="w-full border-gray-600 py-1 pl-3 rounded-lg border-1 mt-2 outline-none focus:ring-indigo-600 :ring-indigo-600"
+                className="w-full border-gray-600 py-1 pl-3 rounded-lg border-1 mt-2 outline-none focus:ring-indigo-600 :ring-indigo-600"
               />
             </div>
-            <div class="mb-3">
-              <label for="email" class="block text-gray-800 font-bold">
+            <div className="mb-3">
+              <label for="email" className="block text-gray-800 font-bold">
                 อาชีพ
               </label>
               <p className="w-full text-gray-600 border-gray-600 py-1 pl-3 rounded-lg border-1  outline-none focus:ring-indigo-600 :ring-indigo-600 bg-sky-100">
@@ -38,16 +38,16 @@ class CustomCharacter extends React.Component {
               {/* <input type="text" name="name" id="name" placeholder="username" class="w-full border-gray-600 py-1 pl-3 rounded-lg border-1  outline-none focus:ring-indigo-600 :ring-indigo-600" />
                */}
             </div>
-            <div class="mb-3">
-              <label for="email" class="block text-gray-800 font-bold">
+            <div className="mb-3">
+              <label for="email" className="block text-gray-800 font-bold">
                 อธิบายประวัติตัวละคร
               </label>
               <p className="w-full text-gray-600 border-gray-600 py-1 pl-3 rounded-lg border-1  outline-none focus:ring-indigo-600 :ring-indigo-600 bg-sky-100">
                 พนักงานบริษัทหญิง ที่บริษัทไอที
               </p>
             </div>
-            <div class="mb-3">
-              <label for="email" class="block text-gray-800 font-bold">
+            <div className="mb-3">
+              <label for="email" className="block text-gray-800 font-bold">
                 เงินเดือน
               </label>
               <div className="w3-light-grey w3-round-xlarge">
@@ -56,18 +56,18 @@ class CustomCharacter extends React.Component {
                 </div>
               </div>
             </div>
-            <div class="mb-3">
-              <label for="email" class="block text-gray-800 font-bold">
+            <div className="mb-3">
+              <label for="email" className="block text-gray-800 font-bold">
                 พลังงาน
               </label>
-              <div class="w3-light-grey w3-round-xlarge">
-                <div class="w3-container bg-sky-500 w3-round-xlarge w-4/5 text-white my-2">
+              <div className="w3-light-grey w3-round-xlarge">
+                <div className="w3-container bg-sky-500 w3-round-xlarge w-4/5 text-white my-2">
                   80/100
                 </div>
               </div>
             </div>
-            <div class="mb-3">
-              <label for="email" class="block text-gray-800 font-bold">
+            <div className="mb-3">
+              <label for="email" className="block text-gray-800 font-bold">
                 ความสุข
               </label>
               <ProgressBar className="rounded-xl" now={60} />
