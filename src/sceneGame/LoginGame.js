@@ -32,12 +32,12 @@ class LoginGame extends Component {
     if (!email || !password) {
       return this.setState({ error: "Fill all fields!" });
     }
-    this.props.context.login(email, password)
-      .then((loggedIn) => {
-        if (!loggedIn) {
-          this.setState({ error: "Invalid Credentails" });
-        }
-      })     
+    // this.props.context.login(email, password)
+    //   .then((loggedIn) => {
+    //     if (!loggedIn) {
+    //       this.setState({ error: "Invalid Credentails" });
+    //     }
+    //   })     
   };
   render() {
     const { isPasswordShown } = this.state;
